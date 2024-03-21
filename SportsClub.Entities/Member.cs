@@ -14,7 +14,11 @@ namespace SportsClub.Entities
         // [Key] om aan te duiden dat dit de PK is
         [Key]
         public int MemberId { get; set; }
+        [Required(ErrorMessage = "Voornaam mag niet leeg zijn.")]
+        [StringLength(20,MinimumLength = 2, 
+            ErrorMessage = "Lengte voornaam tussen {2} en {1}.")]
         public string FirstName { get; set; }
+        [Required(ErrorMessage = "Achternaam mag niet leeg zijn.")]
         public string LastName { get; set; }
 
         // property die link legt met Activity
