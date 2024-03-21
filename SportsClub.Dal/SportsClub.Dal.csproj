@@ -57,6 +57,10 @@
     <Compile Include="Migrations\202403210816563_MemberValidation.designer.cs">
       <DependentUpon>202403210816563_MemberValidation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403210827082_MemberValidationPart2.cs" />
+    <Compile Include="Migrations\202403210827082_MemberValidationPart2.designer.cs">
+      <DependentUpon>202403210827082_MemberValidationPart2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SportsClubDbContext.cs" />
@@ -74,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202403210816563_MemberValidation.resx">
       <DependentUpon>202403210816563_MemberValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403210827082_MemberValidationPart2.resx">
+      <DependentUpon>202403210827082_MemberValidationPart2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,12 +13,26 @@ namespace SportsClub.Bll
         // CREATE
         public static bool Create(string firstName, string lastName)
         {
-            // nieuwe member aanmaken met gegevens uit parameters
-            Member m = new Member(firstName, lastName);
-            // create methode uit dal uitvoeren
-            bool createSuccessful = MemberDal.Create(m);
-            // true of false als return geven
-            return createSuccessful;
+            // spaties verwijderen uit firstname en lastname
+            // de .Trim() methode verwijdert automatisch alle
+            // witruimte (spaties) voor en na een opgegeven string
+            firstName = firstName.Trim();
+            lastName = lastName.Trim();
+
+            // extra controle dat de strings niet leeg of null zijn
+            if (!string.IsNullOrEmpty(firstName)
+                && !string.IsNullOrEmpty(lastName))
+            {
+                // nieuwe member aanmaken met gegevens uit parameters
+                Member m = new Member(firstName, lastName);
+                // create methode uit dal uitvoeren
+                bool createSuccessful = MemberDal.Create(m);
+                // true of false als return geven
+                return createSuccessful;
+            }
+
+            // return als de voorgaande if niet gelukt is
+            return false;
         }
 
         // READ ALL
