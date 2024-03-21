@@ -97,3 +97,4 @@ C:\Users\koenraad.pecceu\Documents\gegevensbeheer\Les06\gegevensbeheer-2324S2-L6
 C:\Users\koenraad.pecceu\Documents\gegevensbeheer\Les06\gegevensbeheer-2324S2-L6-SportsClub\SportsClub.Dal\obj\Debug\SportsClub.Dal.Migrations.MemberValidation.resources
 C:\Users\koenraad.pecceu\Documents\gegevensbeheer\Les06\gegevensbeheer-2324S2-L6-SportsClub\SportsClub.Dal\obj\Debug\SportsClub.Dal.csproj.GenerateResource.cache
 C:\Users\koenraad.pecceu\Documents\gegevensbeheer\Les06\gegevensbeheer-2324S2-L6-SportsClub\SportsClub.Dal\obj\Debug\SportsClub.Dal.Migrations.MemberValidationPart2.resources
+C:\Users\koenraad.pecceu\Documents\gegevensbeheer\Les06\gegevensbeheer-2324S2-L6-SportsClub\SportsClub.Dal\obj\Debug\SportsClub.Dal.Migrations.ActivityValidation.resources

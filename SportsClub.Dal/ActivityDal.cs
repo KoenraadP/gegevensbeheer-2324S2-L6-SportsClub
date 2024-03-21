@@ -14,8 +14,15 @@ namespace SportsClub.Dal
         {
             using (var db = new SportsClubDbContext())
             {
-                db.Activities.Add(a);
-                return db.SaveChanges() > 0;
+                try
+                {
+                    db.Activities.Add(a);
+                    return db.SaveChanges() > 0;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
 

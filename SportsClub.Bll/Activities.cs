@@ -13,8 +13,15 @@ namespace SportsClub.Bll
         // CREATE
         public static bool Create(string name, int maxParticipants)
         {
-            Activity a = new Activity(name, maxParticipants);
-            return ActivityDal.Create(a);
+            name = name.Trim();
+
+            if (!string.IsNullOrEmpty(name))
+            {
+                Activity a = new Activity(name, maxParticipants);
+                return ActivityDal.Create(a);
+            }
+
+            return false;
         }
 
         // READ ALL
