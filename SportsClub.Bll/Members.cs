@@ -62,5 +62,12 @@ namespace SportsClub.Bll
         // UPDATE
 
         // DELETE
+        public static bool Delete(int id)
+        {
+            // member opzoeken met id
+            Member m = MemberDal.Read(id);
+            // delete methode uit dal uitvoeren
+            return MemberDal.Delete(m);
+        }
     }
 }

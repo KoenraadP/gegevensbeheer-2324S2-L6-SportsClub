@@ -70,5 +70,19 @@ namespace SportsClub.WebApp.Controllers
             // member doorgeven aan delete view
             return View(m);
         }
+
+        // tweede methode --> verwerken van delete pagina
+        // andere naam nodig methode --> want zelfde soort parameter (int)
+        // naam parameter wel anders omdat dit moet overeen komen
+        // met de naam van de 'verborgen' input op de view
+        [HttpPost]
+        public ActionResult DeleteConfirmed(int memberId) 
+        {
+            // member met specifieke memberId verwijderen
+            // hiervoor gebruik maken van bll methode
+            Members.Delete(memberId);
+            // terugkeren naar index pagina van members
+            return RedirectToAction("Index");
+        }
     }
 }

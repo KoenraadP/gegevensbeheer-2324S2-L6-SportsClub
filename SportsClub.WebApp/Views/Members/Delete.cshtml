@@ -28,10 +28,14 @@
         </dd>
 
     </dl>
-
-    @using (Html.BeginForm()) {
+    <!-- specifiek vermelden welke methode -->
+    <!-- moet gebruikt worden uit controller -->
+    @using (Html.BeginForm("DeleteConfirmed","Members")) {
         @Html.AntiForgeryToken()
-
+        <!-- member id in verborgen vakje in de html -->
+        <!-- code plaatsen -->
+        <!-- dit om de id te kunnen doorgeven aan een methode -->
+        @Html.HiddenFor(model => model.MemberId)
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")
