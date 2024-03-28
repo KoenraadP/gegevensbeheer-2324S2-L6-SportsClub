@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,6 +70,30 @@ namespace SportsClub.Dal
         }
 
         // UPDATE
+        // updatedMember komt binnen via bll
+        // dit is de aangepaste member, die nog niet
+        // in de databank zit
+        public static bool Update(Member updatedMember)
+        {
+            using (var db = new SportsClubDbContext())
+            {
+                // probeer member te updaten
+                try
+                {
+                    // update member in database
+                    // via updatedMember weet EF het id
+                    db.Members.AddOrUpdate(updatedMember);
+                    // db wijzigingen effectief doorvoeren
+                    // en checken of dit gelukt is
+                    return db.SaveChanges() > 0;
+                }
+                catch
+                {
+                    // niet gelukt om member te updaten?
+                    return false;
+                }
+            }
+        }
 
         // DELETE
         public static bool Delete(Member m)

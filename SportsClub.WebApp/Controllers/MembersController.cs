@@ -60,6 +60,13 @@ namespace SportsClub.WebApp.Controllers
         }
 
         // UPDATE
+        public ActionResult Edit(int id)
+        {
+            // read methode uit bll uitvoeren om member op te zoeken
+            Member m = Members.Read(id);
+            // member doorgeven aan delete view
+            return View(m);
+        }
 
         // DELETE
         // eerste methode --> delete pagina (view) linken en maken
